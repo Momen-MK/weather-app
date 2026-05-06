@@ -498,7 +498,17 @@ function renderWeather(data) {
 // ==========================
 // Fetch Weather
 // ==========================
+function showLoadingState() {
+  document.body.classList.add("loading");
+}
+
+function hideLoadingState() {
+  document.body.classList.remove("loading");
+}
+
 function fetchWeather(lat, lon) {
+  showLoadingState();
+
   fetch(
     `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&hourly=temperature_2m,relativehumidity_2m,precipitation,weathercode&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,weathercode&timezone=auto`
   )
@@ -508,8 +518,12 @@ function fetchWeather(lat, lon) {
     })
     .then(data => {
       renderWeather(data);
+      hideLoadingState();
     })
-    .catch(err => console.log("ERROR:", err));
+    .catch(err => {
+      console.log("ERROR:", err);
+      hideLoadingState();
+    });
 }
 
 
