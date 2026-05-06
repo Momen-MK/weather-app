@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Weather app</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+<header>
+<div class="logo">
+  <img src="assets/images/logo.svg" alt="">
+</div>
+
+<div class="units-btn">
+  <button>
+      <div>
+        <img class="unitImg" src="assets/images/icon-units.svg" alt="">
+          <h4>Units</h4>
+        <img class="arrow" src="assets/images/icon-dropdown.svg" alt="">
+  
+      </div>
+  </button>
+
+<div class="drop"></div>
+
+</div>
+  
+</header>
+
+<main>
+  <!-- Switch to Imperial/Metric -->
+<section class="section-one">
+<div>
+  <h1>
+    <span> How's the </span>
+    <span>sky looking</span> 
+    <span>today?</span>
+  </h1>
+</div>
+
+<div class="search">
+  <div class="search-input-wrapper">
+    <input class="search-bar" type="text" placeholder="Search city..." />
+    <ul class="suggestions"></ul>
+  </div>
+
+  <button class="search-btn">
+    <p>Search</p>
+  </button>
+</div>
+
+</section>
+
+<section class="section-two">
+<div class="status">
+  <!-- <img class="bg" src="assets/images/bg-today-small.svg" alt="">  -->
+
+  <picture class="bg"> 
+    <source srcset="assets/images/bg-today-small.svg" media="(max-width: 474px)">
+
+    <img class="bg-img " src="assets/images/bg-today-large.svg" alt="">
+  </picture>
+
+  <div class="content">
+    <div>
+      <h3 class="location"></h3>
+      <p><span class="time"></span></p>
+    </div>
+
+    <div class="temp-status">
+      <div class="weather-status">
+        <img class="weather-icon" src="" alt="">
+      </div>
+      <div>
+        <h1 class="tempC"></h1>
+        <h1 class="tempF"></h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- <p class="tempC"></p>
+<p class="tempF"></p> -->
+<div class="status-day">
+
+<div>
+  <span>Feels Like</span>
+  <p class="feelsC">°</p>
+  <p class="feelsF">°</p>
+</div>
+
+<div>
+  <span>Humidity</span>
+  <p class="humidity"></p>
+</div>
+
+<div>
+  <span>Wind</span>
+  <p class="km"> </p>
+  <p class="mph"></p>
+</div>
+
+<div>
+  <span>Precipitation</span>
+  <p class="Precipitation"></p>
+  <p class="PrecipitationIn"></p>
+</div>
+
+</div>
+</section>
+
+
+<section class="section-three">
+  <h3>Daily forecast</h3>
+
+  <div class="daily-container">
+    
+  </div>
+
+ </section> 
+  
+
+
+
+
+  <!-- Insert daily forecast for the next 7 days here -->
+<section class="section-four">
+
+  <div class="head-hourly">
+      <h4>Hourly forecast</h4>
+      <div class="custom-dropdown">
+        <button class="dropdown-toggle">Select Day<img src="assets/images/icon-dropdown.svg" alt=""></button>
+        <ul class="dropdown-menu">
+        </ul>
+      </div>
+  </div>
+
+  <div class="hourly-container">
+    
+    
+  </div>
+</section>
+  
+  <!-- Insert hourly forecast for the selected day here -->
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</main>
+  <script src="script.js"></script>
+</body>
+</html>
